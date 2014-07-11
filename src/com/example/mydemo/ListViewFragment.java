@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.achep.header2actionbardemo;
+package com.example.mydemo;
 
 import android.app.Activity;
 import android.app.Fragment;
@@ -29,6 +29,7 @@ import android.widget.ListView;
 import android.widget.ProgressBar;
 
 import com.achep.header2actionbar.HeaderFragment;
+import com.example.com.example.mydemo.R;
 
 import java.lang.ref.WeakReference;
 

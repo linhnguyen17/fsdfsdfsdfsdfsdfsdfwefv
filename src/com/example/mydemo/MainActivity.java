@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.achep.header2actionbardemo;
+package com.example.mydemo;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -23,6 +23,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.achep.header2actionbar.FadingActionBarHelper;
+import com.example.com.example.mydemo.R;
 
 public class MainActivity extends Activity {
 
