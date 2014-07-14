@@ -15,9 +15,12 @@
  */
 package com.example.mydemo;
 
+import android.annotation.SuppressLint;
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.Fragment;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -45,7 +48,7 @@ public class ListViewFragment extends HeaderFragment {
     private AsyncLoadSomething mAsyncLoadSomething;
     private FrameLayout mContentOverlay;
 
-    @Override
+	@Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
 
@@ -95,7 +98,7 @@ public class ListViewFragment extends HeaderFragment {
         return mListView;
     }
 
-    @Override
+	@Override
     public View onCreateContentOverlayView(LayoutInflater inflater, ViewGroup container) {
         ProgressBar progressBar = new ProgressBar(getActivity());
         mContentOverlay = new FrameLayout(getActivity());
@@ -106,7 +109,7 @@ public class ListViewFragment extends HeaderFragment {
         return mContentOverlay;
     }
 
-    private void setListViewTitles(String[] titles) {
+	private void setListViewTitles(String[] titles) {
         mLoaded = true;
         mListViewTitles = titles;
         if (mListView == null) return;
@@ -154,12 +157,7 @@ public class ListViewFragment extends HeaderFragment {
                 e.printStackTrace();
             }
 
-            return new String[]{"Placeholder", "Placeholder", "Placeholder", "Placeholder",
-                    "Placeholder", "Placeholder", "Placeholder", "Placeholder",
-                    "Placeholder", "Placeholder", "Placeholder", "Placeholder",
-                    "Placeholder", "Placeholder", "Placeholder", "Placeholder",
-                    "Placeholder", "Placeholder", "Placeholder", "Placeholder",
-                    "Placeholder", "Placeholder", "Placeholder", "Placeholder"};
+            return new String[]{"Home", "Tìm kiếm ", "facebok", "đăng tin "};
         }
 
         @Override
