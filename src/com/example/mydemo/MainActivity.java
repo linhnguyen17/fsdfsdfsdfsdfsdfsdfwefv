@@ -38,7 +38,6 @@ public class MainActivity extends Activity {
 
         mFadingActionBarHelper = new FadingActionBarHelper(getActionBar(),
                 getResources().getDrawable(R.drawable.actionbar_bg));
-
         if (savedInstanceState == null) {
             getFragmentManager().beginTransaction()
                     .add(R.id.container, new ListViewFragment())
