@@ -18,18 +18,25 @@ package com.example.mydemo;
 import java.lang.ref.WeakReference;
 
 import android.app.Activity;
+import android.content.res.Resources;
+import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.view.animation.TranslateAnimation;
+import android.view.animation.Animation.AnimationListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
-import android.widget.Toast;
 
 import com.achep.header2actionbar.HeaderFragment;
 import com.example.com.example.mydemo.R;
@@ -45,6 +52,7 @@ public class ListViewFragment extends HeaderFragment  {
 
 	    private AsyncLoadSomething mAsyncLoadSomething;
 	    private FrameLayout mContentOverlay;
+	    
 
 	@Override
 	    public void onAttach(Activity activity) {
@@ -92,6 +100,7 @@ public class ListViewFragment extends HeaderFragment  {
 	    @Override
 	    public View onCreateContentView(LayoutInflater inflater, ViewGroup container) {
 	        mListView = (ListView) inflater.inflate(R.layout.fragment_listview, container, false);
+//	        ic_menu_home = (ImageView) inflater.inflate(R.id.image, container, false);
 	        if (mLoaded) setListViewTitles(mListViewTitles);
 	        return mListView;
 	    }
@@ -116,10 +125,25 @@ public class ListViewFragment extends HeaderFragment  {
 	        mListView.setOnItemClickListener(new OnItemClickListener() {
 
 				@Override
-				public void onItemClick(AdapterView<?> arg0, View arg1,
+				public void onItemClick(AdapterView<?> arg0,  final View arg1,
 						int arg2, long arg3) {
 					// TODO Auto-generated method stub
-					Toast.makeText(getActivity(), ""+arg2, Toast.LENGTH_SHORT).show();
+					if(arg2 == 1){
+//						Resources res = getResources();
+//						Drawable drawable = res.getDrawable(R.drawable.ic_launcher);
+						
+//						final Animation move = new TranslateAnimation(arg0.getX(), 240, arg0.getY(), 50);
+//						move.setDuration(1000);
+//						move.setFillAfter(true);
+//					    arg1.setAnimation(move);
+					    final Animation animScale = AnimationUtils.loadAnimation(getActivity(),R.anim.anim_scale_in);
+					    arg1.setAnimation(animScale);
+					    
+					    
+					    
+						
+						
+					}
 				}
 			});
 	        setListViewAdapter(mListView, new ArrayAdapter<String>(
