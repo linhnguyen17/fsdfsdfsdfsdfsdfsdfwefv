@@ -22,6 +22,8 @@
             </intent-filter>
         </activity>
         <activity android:name="com.example.mydemo.SplashAndengine"></activity>
+        <activity android:name="com.example.mydemo.HomeActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar"></activity>
     </application>
 
 </manifest>

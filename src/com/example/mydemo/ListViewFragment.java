@@ -18,6 +18,7 @@ package com.example.mydemo;
 import java.lang.ref.WeakReference;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
@@ -136,10 +137,31 @@ public class ListViewFragment extends HeaderFragment  {
 //						move.setDuration(1000);
 //						move.setFillAfter(true);
 //					    arg1.setAnimation(move);
-					    final Animation animScale = AnimationUtils.loadAnimation(getActivity(),R.anim.anim_scale_in);
+					    final Animation animScale = AnimationUtils.loadAnimation(getActivity(),R.anim.anim_scale_out);
+					    AnimationListener animation1 = new AnimationListener() {
+							
+							@Override
+							public void onAnimationStart(Animation animation) {
+								// TODO Auto-generated method stub
+								 
+							}
+							
+							@Override
+							public void onAnimationRepeat(Animation animation) {
+								// TODO Auto-generated method stub
+								
+							}
+							
+							@Override
+							public void onAnimationEnd(Animation animation) {
+								// TODO Auto-generated method stub
+								
+								 startActivity(new Intent(getActivity(), HomeActivity.class));
+							}
+						};
+					    animScale.setAnimationListener(animation1);
 					    arg1.setAnimation(animScale);
-					    
-					    
+					   
 					    
 						
 						
@@ -183,7 +205,7 @@ public class ListViewFragment extends HeaderFragment  {
 
 	            try {
 	                // Emulate long downloading
-	                Thread.sleep(2000);
+	                Thread.sleep(500);
 	            } catch (InterruptedException e) {
 	                e.printStackTrace();
 	            }
