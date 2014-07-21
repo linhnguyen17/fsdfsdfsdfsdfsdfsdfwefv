@@ -3,6 +3,7 @@ package com.example.mydemo.adapter;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
@@ -35,6 +36,9 @@ public class Home_menu_adapter extends ArrayAdapter<String>{
 
 		txt_menu.setText(abc[position]);
 		switch (position) {
+		case 0:
+			img_menu.setImageResource(R.drawable.ic_cooking);
+			break;
 		case 1:
 			img_menu.setImageResource(R.drawable.ic_cooking);
 			break;
@@ -50,9 +54,9 @@ public class Home_menu_adapter extends ArrayAdapter<String>{
 		case 5:
 			img_menu.setImageResource(R.drawable.ab_background);
 			break;
-		case 6:
-			img_menu.setImageResource(R.drawable.ab_background);
-			break;
+//		case 6:
+//			img_menu.setImageResource(R.drawable.ab_background);
+//			break;
 //		case 7:
 //			img_menu.setImageResource(R.drawable.ab_background);
 //			break;
@@ -61,6 +65,7 @@ public class Home_menu_adapter extends ArrayAdapter<String>{
 			break;
 		}
 
+		
 
 		return v;
 	}

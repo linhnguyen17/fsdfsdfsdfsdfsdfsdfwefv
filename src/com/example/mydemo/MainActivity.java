@@ -15,14 +15,18 @@
  */
 package com.example.mydemo;
 
-import java.util.List;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.Animation.AnimationListener;
+import android.view.animation.AnimationUtils;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -55,6 +59,51 @@ public class MainActivity extends Activity {
         Home_menu_adapter adapter = new Home_menu_adapter(getApplicationContext(), R.layout.item_home_menu_fragment, txt_m);
         listView.setAdapter(adapter);
         
+        listView.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> arg0, final View arg1, int position,
+					long arg3) {
+				// TODO Auto-generated method stub
+				if(position == 1){
+				
+				
+			    final Animation animScale = AnimationUtils.loadAnimation(getApplication(),R.anim.anim_scale_out);
+			    final  Animation animationFadeIn = AnimationUtils.loadAnimation(getApplication(), R.anim.fadein);
+			    final  Animation   animationFadeOut = AnimationUtils.loadAnimation(getApplication(), R.anim.fadeout);
+			    AnimationListener animation1 = new AnimationListener() {
+					
+					@Override
+					public void onAnimationStart(Animation animation) {
+						// TODO Auto-generated method stub
+						
+					}
+					
+					@Override
+					public void onAnimationRepeat(Animation animation) {
+						// TODO Auto-generated method stub
+						
+					}
+					
+					@Override
+					public void onAnimationEnd(Animation animation) {
+						// TODO Auto-generated method stub
+						 arg1.setVisibility(View.GONE);
+						 MainActivity.this.finish();
+						 Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+						 startActivity( intent);
+						 overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+					}
+				};
+			    animScale.setAnimationListener(animation1);
+			    arg1.setAnimation(animScale);
+			   
+			    
+				
+				
+			}
+		}
+	});
     }
 
 
