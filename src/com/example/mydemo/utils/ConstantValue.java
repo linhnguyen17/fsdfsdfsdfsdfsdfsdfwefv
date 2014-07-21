@@ -6,5 +6,5 @@ package com.example.mydemo.utils;
  *         class lưu các biến constant
  */
 public class ConstantValue {
-            
+          
 }

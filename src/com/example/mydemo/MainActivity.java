@@ -15,15 +15,20 @@
  */
 package com.example.mydemo;
 
+import java.util.List;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
-import com.achep.header2actionbar.FadingActionBarHelper;
 import com.example.com.example.mydemo.R;
+import com.example.mydemo.adapter.Home_menu_adapter;
+import com.manuelpeinado.fadingactionbar.FadingActionBarHelper;
 
 public class MainActivity extends Activity {
 
@@ -36,13 +41,20 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mFadingActionBarHelper = new FadingActionBarHelper(getActionBar(),
-                getResources().getDrawable(R.drawable.actionbar_bg));
-        if (savedInstanceState == null) {
-            getFragmentManager().beginTransaction()
-                    .add(R.id.container, new ListViewFragment())
-                    .commit();
-        }
+        mFadingActionBarHelper = new FadingActionBarHelper()
+        .actionBarBackground(R.drawable.ab_background)
+        .headerLayout(R.layout.fragment_header)
+        .contentLayout(R.layout.fragment_listview);
+        
+        setContentView(mFadingActionBarHelper.createView(this));
+        mFadingActionBarHelper.initActionBar(this);
+        
+        
+        ListView listView = (ListView) findViewById(android.R.id.list);
+        String[] txt_m = getResources().getStringArray(R.array.home_item_menu);
+        Home_menu_adapter adapter = new Home_menu_adapter(getApplicationContext(), R.layout.item_home_menu_fragment, txt_m);
+        listView.setAdapter(adapter);
+        
     }
 
 

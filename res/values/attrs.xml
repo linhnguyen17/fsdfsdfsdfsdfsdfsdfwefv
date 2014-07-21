@@ -22,5 +22,7 @@
         <attr name="contourColor" format="color" />
         <attr name="contourSize" format="dimension" />
     </declare-styleable>
-
+   
+    
+  
 </resources>

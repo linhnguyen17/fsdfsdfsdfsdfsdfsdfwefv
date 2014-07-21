@@ -9,16 +9,16 @@
         android:fromXDelta="0%p"
         android:fromYDelta="0%p"
         android:startOffset="300"
-        android:toXDelta="35%p" 
-         android:toYDelta="10%p"/>
+        android:toXDelta="240" 
+         android:toYDelta="20"/>
     <scale
        android:fromXScale="1.0"
-       android:toXScale="3.0"
+       android:toXScale="2.0"
        android:fromYScale="1.0"
-       android:toYScale="3.0"
-       android:pivotX="240"
+       android:toYScale="2.0"
+       android:pivotX="50%"
        android:pivotY="50%"
-       android:duration="1000"
+       android:duration="500"
        android:repeatCount="0"
        android:repeatMode="reverse"
              

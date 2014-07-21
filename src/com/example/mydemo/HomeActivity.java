@@ -3,6 +3,7 @@ package com.example.mydemo;
 import com.example.com.example.mydemo.R;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
@@ -47,5 +48,14 @@ public class HomeActivity extends Activity{
 		};
 		animScale.setAnimationListener(animationlist);
 		img_bar.setAnimation(animScale);
+	}
+	
+	@Override
+	public void onBackPressed() {
+		// TODO Auto-generated method stub
+		super.onBackPressed();
+		startActivity(new Intent(getApplicationContext(), MainActivity.class));
+		this.finish();
+		overridePendingTransition(R.anim.fadein, R.anim.fadeout);
 	}
 }

@@ -8,4 +8,5 @@
     <string name="header_title">Test title text</string>
     <string name="header_subtitle">Test subtitle text</string>
     <string name="descr_image">Image</string>
+ 
 </resources>
