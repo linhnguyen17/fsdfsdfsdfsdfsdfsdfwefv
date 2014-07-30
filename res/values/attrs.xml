@@ -6,7 +6,6 @@
         <attr name="widthPerHeight" format="float" />
         <attr name="enablestate_when_touch" format="boolean" />
     </declare-styleable>
-    
     <declare-styleable name="ProgressWheel">
         <attr name="text" format="string" />
         <attr name="textColor" format="color" />
@@ -22,7 +21,10 @@
         <attr name="contourColor" format="color" />
         <attr name="contourSize" format="dimension" />
     </declare-styleable>
-   
     
-  
+    <declare-styleable name="MyTextView">
+        
+        <attr name="fontName" format="string" />
+    </declare-styleable>
+
 </resources>

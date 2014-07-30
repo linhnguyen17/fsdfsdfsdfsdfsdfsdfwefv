@@ -1,31 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   xmlns:arc="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:layout_height="match_parent" >
 
-    <TextView 
-            android:id="@+id/bg_1"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:background="#853414"
-            />
-        <ImageView
-            android:id="@+id/imagebar1"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_margin="3dp"
-            android:src="@drawable/ic_cooking" />
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="@android:color/transparent" />
 
-        <TextView
-            android:id="@+id/textb_bar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/imagebar1"
-            android:layout_marginTop="7dp"
-            android:layout_marginLeft="10dp"
-            android:textSize="16sp"/>
-
-        
+    <com.capricorn.ArcMenu
+        android:id="@+id/arc_menu_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        arc:childSize="30dp"
+        arc:fromDegrees="270"
+        arc:toDegrees="180" >
+    </com.capricorn.ArcMenu>
 
 </RelativeLayout>

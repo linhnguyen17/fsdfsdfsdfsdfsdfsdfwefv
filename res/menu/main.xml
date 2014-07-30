@@ -1,9 +1,17 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.achep.header2actionbardemo.MainActivity" >
+    xmlns:yourapp="http://schemas.android.com/apk/res-auto" 
+    tools:context="com.achep.header2actionbardemo.MainActivity" 
+    >
     
     <item android:id="@+id/action_github"
         android:title="@string/action_github"
         android:orderInCategory="100"
         android:showAsAction="never" />
+    <!-- 
+     <item android:id="@+id/action_search"
+          android:title="action_search"
+          android:icon="@drawable/ic_shearch"
+          yourapp:showAsAction="never"
+          yourapp:actionViewClass="android.support.v7.widget.SearchView" /> -->
 </menu>

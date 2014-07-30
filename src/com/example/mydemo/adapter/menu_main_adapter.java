@@ -11,10 +11,10 @@ import android.widget.TextView;
 
 import com.example.com.example.mydemo.R;
 
-public class Home_menu_adapter extends ArrayAdapter<String>{
+public class menu_main_adapter extends ArrayAdapter<String>{
 
 	String[] abc;
-	public Home_menu_adapter(Context context, int resource, String[] abc) {
+	public menu_main_adapter(Context context, int resource, String[] abc) {
 		super(context, resource, abc);
 		// TODO Auto-generated constructor stub
 		this.abc = abc;
@@ -27,7 +27,7 @@ public class Home_menu_adapter extends ArrayAdapter<String>{
 		View v = converview;
 		if(v==null){
 			LayoutInflater inflater = LayoutInflater.from(getContext());
-			v = inflater.inflate(R.layout.item_home_menu_fragment, null);
+			v = inflater.inflate(R.layout.item_list_main, null);
 		}
 
 		ImageView img_menu = (ImageView) v.findViewById(R.id.img_menu);

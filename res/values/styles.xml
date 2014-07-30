@@ -6,11 +6,13 @@
         <item name="android:windowContentOverlay">@null</item>
     </style>
 
-    <!--  ************************
+    <!--
+          ************************
           ||||||||||||||||||||||||
                    HEADER
           ||||||||||||||||||||||||
-          ************************  -->
+          ************************
+    -->
     <style name="Header.TitleText" parent="android:TextAppearance.Holo">
         <item name="android:fontFamily" tools:ignore="NewApi">sans-serif-light</item>
         <item name="android:textColor">@android:color/white</item>
@@ -24,6 +26,12 @@
     <style name="Header.SubTitleText" parent="Header.TitleText">
         <item name="android:fontFamily" tools:ignore="NewApi">sans-serif-condensed</item>
         <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="CustomRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/custom_ratingbar</item>
+        <item name="android:minHeight">16dip</item>
+        <item name="android:maxHeight">16dip</item>
     </style>
 
 </resources>

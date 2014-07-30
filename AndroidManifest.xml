@@ -7,9 +7,19 @@
         android:minSdkVersion="14"
         android:targetSdkVersion="21" />
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.NETWORK" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+  
+    
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
+        android:name="com.example.mydemo.DreamApplication"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
@@ -23,7 +33,8 @@
         </activity>
         <activity android:name="com.example.mydemo.SplashAndengine"></activity>
         <activity android:name="com.example.mydemo.HomeActivity"
-            android:theme="@android:style/Theme.Light.NoTitleBar"></activity>
+           android:label="@string/hello_world"
+            ></activity>
     </application>
 
 </manifest>

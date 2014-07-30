@@ -14,7 +14,7 @@ public class AppSharedPreference {
 
 	private final SharedPreferences preferences;
 
-	private final String DefPreferenceName = "dream_come_true_reference";// name
+	private final String DefPreferenceName = "fsdfsdfsdfsdfsdfsdfwefv_reference";// name
 																			// of
 																			// preferences
 																			// file
